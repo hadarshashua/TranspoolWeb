@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="allMapsInfo.css">
+    <script type="text/javascript" src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../../common/context-path-helper.js"></script>
+
+    <script src="allMapsInfo.js"></script>
+    <script src="chat.js"></script>
+
+</head>
+
+<body class = "mainBody">
+<!--<div class="toolBar">-->
+<!--    <div class="toolbarContent">-->
+<!--        <span class="logoutSpan" onclick=location.href="../../index.html">Logout</span>-->
+<!--&lt;!&ndash;        <span class="logoutSpan" onclick=onLogoutClick()>Logout</span>&ndash;&gt;-->
+<!--        <span class="emptySpan"></span>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="row1">
+    <div class="col1">
+        <div class = "title">
+            <h2>Maps details </h2>
+        </div>
+
+        <form id="uploadForm" action="/transPoolWeb_war_exploded/upload" enctype="multipart/form-data" method="POST" class = "upload-form">
+            <label>Select a File:</label><br>
+            <input type="file" name="file" accept="xml"><br>
+            <input type="text" name="mapName"  placeholder="Choose a name for your map"/>
+            <input type="Submit" value="Upload File" class="Button">
+            <div id = "result"></div>
+        </form>
+    </div>
+</div>
+
+<br>
+<div class = "mapsDiv">
+    <table class="MapsTable">
+        <thead class = "maps-table-head">
+        <tr><th>Creator's name</th>
+            <th>Map's name</th>
+            <th>Total stations</th>
+            <th>Total roads</th>
+            <th>Total offered trips</th>
+            <th>Total trip requests</th>
+            <th>Show map</th>
+        </tr></thead>
+        <tbody id="mapsTableBody">
+
+        </tbody>
+    </table>
+</div><br><br>
+
+<div class = "title">
+    <h2>User account details </h2>
+</div>
+
+<div class="user-actions">
+    <h4>Current balance:
+        <label id="balance">0</label>
+    </h4>
+    <input type="button" value="To load money press here" onclick="showMoneyLoader()" class="Button">
+    <div id="load-money" style="display: none">
+        <form id="loadMoneyForm" method="GET" action="loadMoney">
+            <label>Please enter amount of money to load to your account : </label><br>
+            <input type="text" id="money" name="money">
+            <input type="submit" value="Load" ><br>
+            <div id = "result-money"></div><br>
+        </form>
+    </div>
+    <input type="button" value="Present all account operations" onclick="showAccountOperations()" class="second-button"><br><br>
+    <div id="show-operations" style="display: none" class = "actions-div">
+        <form id="showOperationsForm" method="POST" action="showOperations">
+            <table class="ActionsTable">
+                <thead class = "actions-table-head">
+                <tr><th>Operation type</th>
+                    <th>Operation date</th>
+                    <th>Total payment</th>
+                    <th>Balance before payment</th>
+                    <th>Balance after payment</th>
+                </tr></thead>
+                <tbody id="actionsTableBody">
+
+                </tbody>
+            </table>
+        </form><br>
+        <input type="button" value="Close table" onclick="unShowAccountOperations()" class="Button" id="closeTableButton"><br><br>
+    </div>
+</div>
+
+<div class="col2">
+    <div class="row">
+        <div class="col-xs-1">
+            <div class="sidebar">
+                <h4>Online</h4>
+                <div class="clearfix">
+                    <div class="input">
+                        <ul id="userslist">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="content">
+                <div id="chatwindow">
+                    <h4>Chat</h4>
+                    <div id="chatarea" class="span6"></div>
+                    <form id="chatform" method="POST" action="sendChat">
+                        <input type="text" id="userstring" name="userstring"/>
+                        <input type="submit" value="Send"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

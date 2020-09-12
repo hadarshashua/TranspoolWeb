@@ -1,0 +1,297 @@
+ Style the buttons that are used to open and close the accordion panel
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.map{
+    display: block;
+    margin: auto;
+    background-image: url("../../common/images/city-map.jpg");
+}
+
+.row{
+    width: 100%;
+    font-family: cursive;
+    font-size: 17px;
+    color: #0b0e4b;
+}
+
+ .columnLeft {
+     float: left;
+     width: 30%;
+     display: block;
+     margin: auto;
+     text-align: center;
+ }
+
+ .columnMiddle {
+     float: left;
+     width: 40%;
+     display: block;
+     margin: auto;
+     text-align: center;
+ }
+
+ .columnRigth {
+     float: left;
+     width: 30%;
+     display: block;
+     margin: auto;
+     text-align: center;
+ }
+
+ /* Clear floats after the columns */
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ .title{
+     text-align: center;
+     font-family: "BN Matan";
+     color: #0b0e4b;
+     font-size: 35px;
+ }
+
+ .second-title{
+     text-align: center;
+     font-family: cursive;
+     color: #0b0e4b;
+     font-size: 25px;
+ }
+
+ body{
+     background-image: url("../../common/images/blue-background.jpg");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+     background-size: 100%;
+ }
+
+ .accordionButton{
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+     width: 100%;
+     background-image: linear-gradient(to right, rgb(189, 216, 222), rgb(125, 136, 139));
+
+ }
+
+ .feedbacks-button{
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+     width: 100%;
+     background-image: linear-gradient(to right, rgb(189, 216, 222), rgb(125, 136, 139));
+ }
+
+ .feedbacks-accordion {
+     background-color: #eee;
+     color: #444;
+     cursor: pointer;
+     width: 25%;
+     border: none;
+     outline: none;
+     transition: 0.4s;
+     text-align: center;
+     margin: 0;
+     position: absolute;
+     /*//top: 50%;*/
+     left: 38%;
+     -ms-transform: translate(-50%, -50%);
+     /*//transform: translate(-50%, -50%);*/
+ }
+
+ .Button
+ {
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+     background-image: linear-gradient(to right, rgb(189, 216, 222), rgb(125, 136, 139));
+ }
+
+ .second-button{
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+     background-image: linear-gradient(to right, rgb(189, 216, 222), rgb(125, 136, 139));
+     margin-left: 8px;
+ }
+
+ .line{
+     stroke: #000000;
+     stroke-width: 2;
+ }
+
+ .boldLine{
+     stroke: #c91543;
+     stroke-width: 3;
+ }
+
+ .text{
+     fill: #a10808;
+ }
+
+.boldStation{
+    fill: #c91543;
+    r: 9px;
+}
+
+ .options-table {
+     border: 1px black solid;
+     border-radius: 6px;
+     width: 100%;
+     font-family: cursive;
+     font-size: 15px;
+ }
+
+ .options-table th {
+     width: 16%;
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ .options-table tr {
+     background: #d0baba;
+     text-align: center;
+
+ }
+
+
+ th {
+     padding: 0% 5% 2% 1%;
+     background: rgba(165, 17, 51, 0.97);
+     text-align: center;
+     vertical-align: middle;
+ }
+
+ .table-button{
+     background: #ecdede;
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+ }
+
+ #resultAddTrip{
+     color: #b30909;
+     font-family: cursive;
+ }
+
+ #resultError{
+     color: #b30909;
+ }
+
+ #maxOptionsDiv{
+     text-align: center;
+ }
+
+ .back-button
+ {
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+     background-image: linear-gradient(to right, rgb(189, 216, 222), rgb(125, 136, 139));
+     -webkit-text-fill-color: #000000;
+     margin-left: 3px;
+ }
+
+ .row1{
+     width: 100%;
+ }
+
+ .col1{
+     width: 20%;
+     float: left;
+     display: block;
+     margin: auto;
+     padding-top: 17px;
+ }
+
+ .col2{
+     width: 80%;
+     float: left;
+     display: block;
+     margin: auto;
+ }
+
+ #result{
+     color: #b30909;
+ }
+
+ .feedbackMessageLabel{
+     margin-left: 55px;
+ }
+
+ .submitButton{
+     font-size: 15px;
+     border-radius: 10px;
+     padding: 5px;
+     font-family: cursive;
+     background-image: linear-gradient(to right, rgb(189, 216, 222), rgb(125, 136, 139));
+     margin-left: 20px;
+     margin-right: 10px;
+ }
+
+ #maxOptionsResult{
+     color: #b30909;
+ }
+
+ .actions{
+     text-align: center;
+     position: relative;
+ }
+
+ .feedback-owner{
+     font-size: 16px;
+     font-weight: bold;
+     font-family: cursive;
+ }
+
+ #feedbacksDivBody{
+     font-family: cursive;
+ }
+
+ #addTripRequest{
+     font-family: cursive;
+ }
+
+ #addOfferedTrip{
+     font-family: cursive;
+ }
+
+ .options-div{
+     text-align: center;
+ }
+
+ #noMatch{
+     font-family: cursive;
+
+ }

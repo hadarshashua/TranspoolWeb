@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <script type="text/javascript" src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../../common/context-path-helper.js"></script>
+
+    <script src="passenger_map.js"></script>
+</head>
+<body>
+
+<div>
+    <a class = "back-button" href="/transPoolWeb_war/pages/allMapsInfo/allMapsInfo.html">Back To Main Page</a>
+    <h1  class = "title">Map Information</h1>
+</div>
+
+
+<div class="row">
+    <div class="columnLeft">
+        <h2>All Offered Trips:</h2>
+        <div class = accordion id = "offeredTripsAccordion"></div>
+    </div>
+
+    <div class="columnMiddle" id="svgDiv"></div>
+
+    <div class="columnRigth">
+        <h2>My Matched Trips:</h2>
+        <div class = accordion id = "matchedTripsAccordion"></div>
+
+        <h2>My Trip Requests:</h2>
+        <div class = accordion id = "tripRequestsAccordion"></div>
+    </div>
+</div><br>
+
+<h1  class = "second-title">Account actions</h1>
+
+<div class="actions">
+    <div id = "resultAddTrip"></div>
+    <input type="button" value="Add Trip Request" onclick="AddTripRequest()" class="Button"><br><br>
+    <div id="addTripRequest" style="display: none">
+        <form id="addTripRequestForm" action="/transPoolWeb_war_exploded/addTripRequest" method="GET">
+            <label>Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name"/><br>
+            <label>Choose your first station:</label>
+            <select name="firstStation" id="firstStation"></select><br>
+            <label>Choose your last station:</label>
+            <select name="lastStation" id="lastStation"></select><br>
+            <label>Enter trip day:</label>
+            <input type="text" name="day" placeholder="Enter day"/><br>
+            <label>Choose Time: </label>
+            <label> hours</label>
+            <select name="hour" id="hour"></select>
+            <label>minutes</label>
+            <select name="minutes" id="minutes"></select><br>
+            <label> Please select option: </label>
+            <input type="radio" id="departure" name="timeType" value="departure">
+            <label for="departure">Departure time</label>
+            <input type="radio" id="arrival" name="timeType" value="arrival">
+            <label for="arrival">Arrival time</label><br><br>
+            <div id = "resultError"></div><br>
+            <input type="button" value="Cancel" onclick="CancelTripRequest()" class="Button">
+            <input type="submit" value="Add Trip" class="Button"><br>
+        </form>
+    </div>
+</div>
+
+<div id="findMatchDiv" style="display: none">
+    <h1  class = "second-title">Match options</h1>
+
+    <div id = "maxOptionsDiv" class="row" style="display: none">
+        <form id="findMatchForm" method="get" action="/transPoolWeb_war_exploded/findMatch">
+            <input type="text" name="maxOptions" id="maxOptions" placeholder="Enter max options"/>
+            <input name="tripId" type="hidden" id="tripId">
+            <input type="submit" value="Search" class="Button"><br><br>
+            <label id="maxOptionsResult"></label>
+        </form>
+    </div>
+
+    <div class = "options-div" id="options-div" style="display: none">
+        <table class="options-table">
+            <thead class = "options-table-head">
+            <tr><th>Option</th>
+                <th>Total price</th>
+                <th>Fuel consumption</th>
+                <th>Route description</th>
+                <th>Match</th>
+            </tr></thead>
+            <tbody id="optionsTableBody"></tbody>
+        </table><br>
+        <label id="noMatch"></label><br>
+
+        <input type="button" value="Cancel Match" onclick="CancelMatch()" class="Button">
+    </div><br>
+</div>
+
+<div id = "feedbacksDiv"></div>
+<div id="feedbacksDivBody" style="display: none"></div>
+
+</body>
+</html>

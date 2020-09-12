@@ -1,0 +1,173 @@
+.MapsTable {
+    border: 1px black solid;
+    border-radius: 6px;
+    width: 100%;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+.MapsTable th {
+    width: 16%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.ActionsTable{
+    border: 1px black solid;
+    border-radius: 6px;
+    width: 100%;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+.ActionsTable th {
+    width: 16%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.gamesDiv {
+    flex: 2 0 0;
+}
+
+.MapsTable tr {
+    background: #d0baba;
+    text-align: center;
+
+}
+
+.ActionsTable tr{
+    background: #d0baba;
+    text-align: center;
+
+}
+
+th {
+    padding: 0% 5% 2% 1%;
+    background: rgba(165, 17, 51, 0.97);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.userNameSpan {
+    margin: 20px;
+}
+
+.Button{
+    background: #d0baba;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.second-button{
+    background: #d0baba;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 8px;
+}
+
+.map-button{
+    background: #ecdede;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: cursive;
+}
+
+.toolBar{
+    height: 50px;
+    background: #807e7e;
+    padding-left: 10px;
+}
+
+.mainBody{
+    background-image: url("../../common/images/peach-background.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: cursive;
+    background-size: 100%;
+}
+
+
+.upload-form{
+    font-family: cursive;
+    text-align: center;
+
+}
+
+.upload-form input {
+    font-family: inherit;
+    text-align: center;
+
+}
+
+.maps-table-head{
+    color: #ded8d8;
+    font-family: cursive;
+    font-size: 15px;
+
+}
+
+.actions-table-head{
+    color: #ded8d8;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+.title{
+    font-family: cursive;
+    text-align: center;
+    color: rgba(165, 17, 51, 0.97);
+    font-size: 20px;
+
+}
+
+#chatarea {
+    overflow-y: scroll;
+    max-height: 100px;
+}
+
+.smiley-image {
+    width: 20px;
+    height: 20px;
+}
+
+.row1{
+    width:100%;
+}
+
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col1{
+    width:70%;
+    /*float: right;*/
+    /*display: block;*/
+    margin: auto;
+    /*padding-left: 195px;*/
+}
+
+.col2{
+    background-color: #d0baba;
+    /*width:20%;*/
+    padding: 10px;
+    border:double;
+    float: right;
+    display: block;
+    margin: auto;
+}
+
+
+.user-actions{
+    text-align: center;
+}
+
+#result-money{
+    color: #b30909;
+}

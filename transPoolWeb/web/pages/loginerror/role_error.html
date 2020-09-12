@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TransPool</title>
+
+    <!-- Link the Bootstrap (from twitter) CSS framework in order to use its classes-->
+    <link rel="stylesheet" href="pages/signup/signup.css">
+
+    <!-- Link jQuery JavaScript library in order to use the $ (jQuery) method-->
+    <!-- <script src="common/jquery-2.0.3.min.js"></script>-->
+    <!-- and\or any other scripts you might need to operate the JSP file behind the scene once it arrives to the client-->
+</head>
+<body>
+<div class = "mainDiv">
+    <div>
+        <label class = "firstTitle"> Welcome to TransPool system </label><br>
+        <label class = "secondTitle"> Please enter user name: </label><br><br><br>
+        <form method="POST" action="login" class = "role">
+            <input type="text" name="username"/>
+            <input type="submit" value="Login"/><br><br>
+            <label> Please select your role: </label>
+            <input type="radio" id="Passenger" name="role" value="Passenger">
+            <label for="Passenger">Passenger</label>
+            <input type="radio" id="Owner" name="role" value="Owner">
+            <label for="Owner">Owner</label><br>
+            <span class="error-message" >Error: please choose role</span><br>
+
+        </form>
+    </div><br>
+
+
+</div>
+</body>
+</html>

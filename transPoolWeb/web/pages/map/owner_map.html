@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <script type="text/javascript" src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../../common/context-path-helper.js"></script>
+
+    <script src="owner_map.js"></script>
+</head>
+<body>
+
+<div>
+    <a class = "back-button" href="/transPoolWeb_war/pages/allMapsInfo/allMapsInfo.html">Back To Main Page</a>
+    <h1  class = "title">Map Information</h1>
+</div>
+
+<div class="row">
+    <div class="columnLeft">
+        <h2>My Offered Trips:</h2>
+        <div class = accordion id = "offeredTripsAccordion"></div>
+    </div>
+
+    <div class="columnMiddle" id="svgDiv"></div>
+
+    <div class="columnRigth">
+        <h2>All Matched Trips:</h2>
+        <div class = accordion id = "matchedTripsAccordion"></div>
+
+        <h2>All Trip Requests:</h2>
+        <div class = accordion id = "tripRequestsAccordion"></div>
+    </div>
+</div><br>
+
+<h1  class = "second-title">Account actions</h1>
+
+<div class="actions"><br>
+    <div id = "resultAddTrip"></div>
+    <input type="button" value="Add Offered Trip" onclick="AddOfferedTrip()" class="Button"><br><br>
+    <div id="addOfferedTrip" style="display: none">
+        <form id="addOfferedTripForm" action="/transPoolWeb_war_exploded/addOfferedTrip" method="GET">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Enter your name"/><br>
+            <label>Enter your trip route:</label>
+            <input type="text" name="route" placeholder="Stations separated by coma"/><br>
+            <label>Enter trip day:</label>
+            <input type="text" name="day" placeholder="Enter day"/><br>
+            <label>Choose Time:</label>
+            <label> hours</label>
+            <select name="hour" id="hour"></select>
+            <label>minutes</label>
+            <select name="minutes" id="minutes"></select><br>
+            <label>Choose recurrences of your trip:</label>
+            <select name="recurrences" id="recurrences">
+                <option value="One time">One time</option>
+                <option value="Daily">Daily</option>
+                <option value="BDaily">BDaily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+            </select><br>
+            <label>Enter price per km:</label>
+            <input type="text" name="ppk" placeholder="Enter price per km"/><br>
+            <label>Enter capacity:</label>
+            <input type="text" name="capacity" placeholder="Enter capacity"/><br><br>
+            <div id = "resultError"></div><br>
+            <input type="button" value="Cancel" onclick="CancelOfferedTrip()" class="Button">
+            <input type="submit" value="Add Trip" class="Button"><br><br>
+        </form>
+    </div>
+
+    <div class = feedbacks-accordion id = "feedbacksAccordion"></div>
+
+</div>
+
+
+</body>
+</html>
